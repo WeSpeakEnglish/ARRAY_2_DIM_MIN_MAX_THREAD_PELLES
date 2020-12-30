@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1609329650 source:c:\prj_to_merge\array_2_dim_min_max_thread_pelles\array_2_dim_min_max\main.c
+1609332898 source:c:\prj_to_merge\array_2_dim_min_max_thread_pelles\array_2_dim_min_max\main.c
 	<stdio.h>
 	<stdlib.h>
 	<Windows.h>
@@ -7,5 +7,5 @@
 	<math.h>
 	"nortos.h"
 
-1609329728 c:\prj_to_merge\array_2_dim_min_max_thread_pelles\array_2_dim_min_max\nortos.h
+1609330769 c:\prj_to_merge\array_2_dim_min_max_thread_pelles\array_2_dim_min_max\nortos.h
 
