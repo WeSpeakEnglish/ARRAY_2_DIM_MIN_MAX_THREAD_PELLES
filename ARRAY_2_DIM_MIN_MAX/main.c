@@ -8,7 +8,7 @@
 #define CHANNELS_N      2   //channels of ADC collecting
 #define BUFFER_SIZE     16// points for each ADC channel (collected in total)
 #define STEP_AMP_MEAN   8 // how many points to average (steep control) (attack ) for each the channels
-#define THRESHOLD_VALUE 500  //hihger apmlithude = increade Attenuation, lower = decrease ATT
+#define THRESHOLD_VALUE 1000  //hihger apmlithude = increade Attenuation, lower = decrease ATT
 #define MIDDLE_VALUE    2048  //cold be autocalibrated with muted input signal
 
 volatile uint16_t bufferADC[BUFFER_SIZE][CHANNELS_N];    //buffer of ADC
@@ -47,7 +47,7 @@ int module (int A){
  if (amp2max > THRESHOLD_VALUE) amp2sin--;
  else amp2sin++;
 
- printf ("\n amp1max: %d, amp1sin: %d;   amp2max: %d, amp2sin: %d\n", amp1max, amp1sin, amp2max, amp2sin);
+ printf ("\n Param transferred: %d; amp1max: %d, amp1sin: %d;   amp2max: %d, amp2sin: %d\n", Cont->IntVar, amp1max, amp1sin, amp2max, amp2sin);
  }
 
 DWORD WINAPI DoStuff(LPVOID lpParameter)
