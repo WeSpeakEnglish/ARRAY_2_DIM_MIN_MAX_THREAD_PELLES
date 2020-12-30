@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1609315137 source:c:\prj_to_merge\array_2_dim_min_max_thread_pelles\array_2_dim_min_max\main.c
+	<stdio.h>
+	<stdlib.h>
+	<Windows.h>
+	<stdint.h>
+	<math.h>
+
