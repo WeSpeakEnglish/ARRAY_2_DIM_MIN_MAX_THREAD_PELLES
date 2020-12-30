@@ -28,20 +28,21 @@ DWORD WINAPI DoStuff(LPVOID lpParameter)
 
     Sleep(2000);
      //fill with sin
-     *pointerCH1 = 2048 + (uint16_t)2048.0*sin((float)counterThread/4.0);
+     *pointerCH1 = 2048 + (uint16_t)2048.0*sin((float)counterThread/2.0);
      pointerCH1+=2;
  //    pointerCH1++;
      if (pointerCH1 > &bufferADC[BUFFER_SIZE -1][0]) pointerCH1 = &bufferADC[0][0];
-     *pointerCH2 = 2048 + (uint16_t)2048.0*sin((float)counterThread/4.0);
+
+     *pointerCH2 = 2048 + (uint16_t)2048.0*sin((float)counterThread/2.7 + 0.17);
      pointerCH2+=2;
  //    pointerCH1++;
-     if (pointerCH2 > &bufferADC[BUFFER_SIZE -1][0]) pointerCH2 = &bufferADC[0][0];
+     if (pointerCH2 > &bufferADC[BUFFER_SIZE -1][1]) pointerCH2 = &bufferADC[0][1];
     //printf("%d\n",counterThread++);
 
     printf("Addr: bufferADC[BUFFER_SIZE -1][0]: %d\n",(int)&bufferADC[BUFFER_SIZE -1][0]);
-    printf("Addr: pointerCH1: %d\n",(int)pointerCH1);
-    printf("Addr: bufferADC[BUFFER_SIZE -1][0]: %d\n",(int)&bufferADC[BUFFER_SIZE -1][0]);
-    printf("Addr: pointerCH1: %d\n",(int)pointerCH1);
+    printf("Addr: pointerCH1: %d\n\n",(int)pointerCH1);
+    printf("Addr: bufferADC[BUFFER_SIZE -1][1]: %d\n",(int)&bufferADC[BUFFER_SIZE -1][1]);
+    printf("Addr: pointerCH2: %d\n\n",(int)pointerCH2);
 
     for(int i = 0; i < CHANNELS_N; i++){
      printf("\nCH%d\n",i + 1);
